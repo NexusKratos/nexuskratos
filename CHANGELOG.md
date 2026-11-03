@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.2 — 2026-11-04
+
+- Record the live website and verified canonical-domain forwarding; platform implementation remains future work.
+
 ## 0.0.1 — 2026-11-04
 
 - Establish the public NexusKratos project foundation and Apache-2.0 license.

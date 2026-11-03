@@ -1,5 +1,5 @@
 # Progress
 
-2026-11-04: organization profile and both public repositories created. The platform foundation is documented and checked for relative links and private local paths. No platform runtime is implemented. Warboard remains under development; integration is planned.
+2026-11-04: public organization and repository foundations are complete. The website is live at https://nexuskratos.dev, with .com and both www variants permanently redirecting to the primary hostname. Website source and deployment records are maintained in the separate `NexusKratos/website` repository.
 
-The website is being completed in its separate repository. Cloudflare OAuth refreshed successfully and both domains are active; native Pages integration still needs the Cloudflare GitHub App installed for NexusKratos/website.
+The NexusKratos platform runtime is not implemented. Warboard remains under active development, independently usable, and in its existing repository; integration is planned. Recommended source boundaries, Rust/TypeScript roles, and headless task behavior are recorded in ARCHITECTURE.md.

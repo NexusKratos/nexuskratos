@@ -43,7 +43,7 @@ Warboard is the visibility component being developed for the NexusKratos ecosyst
 - General contact: [hello@nexuskratos.dev](mailto:hello@nexuskratos.dev)
 - Private security reports: [security@nexuskratos.dev](mailto:security@nexuskratos.dev)
 
-Primary domain: **nexuskratos.dev**. The additional **nexuskratos.com** domain is intended to redirect to it; domain purchase alone does not establish a live website or redirect.
+Website: **https://nexuskratos.dev**. The additional **nexuskratos.com** domain and both www variants permanently redirect to the primary site. The website is an introduction to the project; it is not a runnable NexusKratos platform.
 
 ## License
 
