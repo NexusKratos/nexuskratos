@@ -20,3 +20,7 @@ Maintainers allocate the next SemVer in `VERSION`. `checkpoint/<VERSION>` identi
 ## Reporting
 
 Use issues for ordinary bugs and proposals. Send sensitive reports privately to the address in [SECURITY.md](SECURITY.md).
+
+## Protected branches and automation
+
+Changes to `main` require a pull request. Ordinary contributions require one approving review and resolved conversations; stale approvals are dismissed when source changes. Only merge commits are allowed. The sole maintainer can use the documented administrator exception through a PR; direct pushes remain blocked. Checkpoint and release tags cannot be rewritten or deleted. Actions must be pinned to full commit SHAs and currently must be GitHub-owned; external contributors need approval before workflows run.

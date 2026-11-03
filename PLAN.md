@@ -17,3 +17,7 @@ Threat sketch: public documentation and static website, no user accounts or stor
 | Verify and publish source | Coordinator | Both new repositories | Public metadata, pushed commit/tag parity | Hosting access if available |
 
 Communication: native worker completion messages; coordinator integrates shared records sequentially. No worker commits or external publication. Cloudflare authentication refreshed successfully. Website deployment requires the Cloudflare GitHub App connection for the new organization; its separate repository tracks this external prerequisite.
+
+## Repository security — authorized 2026-11-04
+
+Status: done 2026-11-04 for the applied configuration; source records close through the protected PR workflow. Owner: coordinator. Scope: the two new public repositories only. Record security choices, enable native GitHub settings, commit the settings documentation, activate branch/tag rules, and verify API readback. No application code, dependencies, deployment, organization membership, or org-wide account policy changes. Threat scope: protect shared source and workflow permissions; preserve owner access through an audited PR exception.
