@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.3 — 2026-11-04
+
+- Configure public repository security, protected branches/tags, private reporting, scanning, and restricted Actions permissions.
+
 ## 0.0.2 — 2026-11-04
 
 - Record the live website and verified canonical-domain forwarding; platform implementation remains future work.
