@@ -5,3 +5,5 @@
 The NexusKratos platform runtime is not implemented. Warboard remains under active development, independently usable, and in its existing repository; integration is planned. Recommended source boundaries, Rust/TypeScript roles, and headless task behavior are recorded in ARCHITECTURE.md.
 
 2026-11-04: repository security baseline applied and verified. Main requires PRs; history and release/checkpoint tags are protected. Secret scanning/push protection, private reporting, dependency alerts/security updates, and restricted Actions permissions are enabled. Administrators retain an explicitly documented PR-only approval exception. No application code or deployment changed.
+
+2026-11-04: platform implementation plan drafted with 19 tasks, four milestones, explicit trust/credential boundaries, fencing and recovery contracts, local budget semantics, multi-community/repository delivery, provider feasibility gates and release evidence. Planning only; no implementation task started.

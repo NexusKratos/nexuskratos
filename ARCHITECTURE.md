@@ -37,3 +37,7 @@ Rust is recommended for the contributor agent, CLI adapters, and coordinator; Ty
 Task execution should be headless by default. Each task declares `headless` or `human-assisted` execution, and each adapter must prove unattended operation and detectable completion. Provider login may require interactive onboarding; it must not become an invisible prompt inside an unattended task.
 
 A task needing input enters an explicit needs-attention state with a reason and deadline. Cancellation, timeouts, and budget accounting must cover subprocesses. Retries are bounded; partial work is preserved across lease expiry and reassignment. Report current step, usage, logs, last meaningful progress, and deadline to the visibility layer. A heartbeat alone does not establish progress or success.
+
+## Implementation planning proposal
+
+The [platform implementation plan](docs/plans/2026-11-04-platform-implementation.md) develops these recommendations into task dependencies, protocols, failure handling and acceptance evidence. [ADR 0003](docs/adr/0003-platform-planning-boundaries.md) records proposed modular control/storage and execution boundaries. The plan adds `apps/web` as the TypeScript build boundary within this monorepo. These remain design proposals; no framework, datastore or runtime has been installed.
