@@ -48,7 +48,7 @@ The owner is considering `nexuskratos.dev` for framework releases/docs and `nexu
 
 ## Reconciled technical delivery plan
 
-The [reconciled implementation plan](docs/plans/2026-11-04-platform-implementation.md) retains the original lease/recovery and provider-credential design and extends it to **25 dependency-ordered tasks** with repository registration, marketplace governance, Community Manager permissions, independent security scanning, GitHub-free onboarding, notification/recognition contracts and signed daemon releases. [ADR 0003](docs/adr/0003-platform-planning-boundaries.md) records proposed technology choices. **Documentation only; no runtime is implemented or approved for execution.**
+The [reconciled implementation plan](docs/plans/2026-11-04-platform-implementation.md) retains the original lease/recovery and provider-credential design and extends it to **35 dependency-ordered tasks** with repository registration, marketplace governance, Community Manager permissions, independent security scanning, GitHub-free onboarding, notification/recognition contracts and signed daemon releases. [ADR 0003](docs/adr/0003-platform-planning-boundaries.md) records proposed technology choices. **Documentation only; no runtime is implemented or approved for execution.**
 
 ## GitHub-free contributor marketplace (2026-11-05 design update)
 
@@ -56,6 +56,12 @@ The newer product vision introduces a moderated project catalog, idea submission
 
 The local daemon enforces donor opt-in per project plus CPU, RAM, disk, concurrency, time, model/provider and trustworthy measurable usage limits. The marketplace can allocate work only inside those constraints; project approval is not permission to execute. Reputation reflects accepted evidence rather than tokens spent.
 
-The full [system design](docs/architecture/system.md), [marketplace specification](docs/vision/marketplace.md), [user journey](docs/vision/contributor-journey.md), [security gates](docs/security/threat-model.md), [diagrams](docs/architecture/diagrams.md), and [design notes](docs/brainstorming/2026-11-05-design-notes.md) document proposed boundaries. The existing [implementation-plan PR #2](https://github.com/NexusKratos/nexuskratos/pull/2) remains a technical planning input to reconcile; it is not silently merged by this update.
+The full [system design](docs/architecture/system.md), [marketplace specification](docs/vision/marketplace.md), [user journey](docs/vision/contributor-journey.md), [security gates](docs/security/threat-model.md), [diagrams](docs/architecture/diagrams.md), and [design notes](docs/brainstorming/2026-11-05-design-notes.md) document proposed boundaries. The [merged implementation plan](docs/plans/2026-11-04-platform-implementation.md) now contains additional architecture and qualification tasks; no working platform is implied.
 
 The choice between one general-purpose runner harness and multiple provider-native harnesses is **deferred**. Use a typed, versioned adapter boundary in architecture meanwhile; do not hardwire a private runner or promise identical provider behavior. Security and compatibility fixtures, not preference alone, must decide implementation.
+
+## Architecture-first planning and deterministic orchestration
+
+The project community owns design/governance. Nexus Kratos enforces versioned independent architecture and plan reviews before task eligibility, while the contributor daemon offers opt-in architect, planner, reviewer and builder roles. AI proposes and reviews; the coordinator deterministically enforces task DAGs, leases, resource limits, trust and acceptance. Task Orc is a **private, unfinished evaluation candidate**, not an adopted dependency.
+
+See [planning/orchestration](docs/architecture/planning-and-orchestration.md), [Task Orc qualification](docs/architecture/task-orc-qualification.md), [knowledge/provider policy](docs/architecture/provider-and-knowledge.md), and [continuous SBOM/CVE monitoring](docs/security/continuous-supply-chain.md).
