@@ -69,7 +69,9 @@ The **contributor daemon** is planned as a signed Rust binary with a local web U
 
 The **GitHub integration** publishes attempt-specific branches and PRs using limited GitHub App permissions, but it does not permit donors or their models to merge unreviewed code. Candidate review and QA evidence must bind to the exact commit and repository base.
 
-**Warboard** remains independently developed and optional; it may consume redacted progress and telemetry without becoming a scheduling dependency.
+**Warboard** remains independently developed and optional. The proposed **free project Warboard** is an automatically refreshed, sanitized GitHub Pages dashboard published with a project's chosen repository; a **premium managed Warboard** may offer live/private/history features on a hosted Nexus Kratos service. Both are views of coordinator data, never scheduling authorities. See [Warboard delivery](docs/architecture/warboard-delivery.md).
+
+Official-community architecture checks are proposed to use multiple **independent, opt-in high-capability reviewer contributors**. Projects can wait for volunteer review capacity free of charge or choose paid Nexus Kratos-operated review capacity under **exactly the same security and approval requirements**. See [architecture reviewer pool](docs/architecture/independent-architecture-review.md) and [free tier/trust design](docs/architecture/trust-and-sustainability.md).
 
 Read the [detailed system architecture](docs/architecture/system.md) and [architecture/workflow diagrams](docs/architecture/diagrams.md).
 

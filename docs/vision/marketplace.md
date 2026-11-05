@@ -37,6 +37,12 @@ The `NexusKratos/nexuskratos` repository produces the **framework**—control pl
 
 For future public interfaces, propose `nexuskratos.dev` as the framework/developer site and `nexuskratos.com` as the community/project proposal and discovery site. The live `.com` redirect is unchanged and no community site exists yet. See [framework and project boundaries](../architecture/project-boundaries.md).
 
+## Independent architecture assurance and free Warboard
+
+Architecture belongs to the project's authorized architecture group, not the Nexus Kratos operator. For the official community, project implementation eligibility additionally requires a versioned architecture, its governance decision, and **multiple genuinely independent high-capability AI architecture reviews** with blocking contradictions resolved. Interested users may opt into donating higher-cost AI capacity as Architecture Reviewers. If qualified free reviewers are unavailable, the request waits; projects may alternatively pay for operator-funded independent review **under the same standards**. See [architecture review pool](../architecture/independent-architecture-review.md) and [cost-recovery design](../architecture/trust-and-sustainability.md).
+
+The free public project Warboard is proposed as **automatically generated GitHub Pages content in the project's own selected repository**, with multi-repository aggregation and visible snapshot freshness. Premium managed Warboard may be hosted by Nexus Kratos for live/private/advanced features; a paid plan is not required to see the basic status. See [Warboard delivery](../architecture/warboard-delivery.md).
+
 ## Trust and transparency boundaries
 
 A catalog entry, review score or badge never implies code is safe to run. Donor opt-in is independent of project approval; a donor can revoke an individual project without leaving the community. Each work request is pinned to a project, repository, task revision, model policy and permitted execution profile. New trust requirements trigger fresh consent.
