@@ -55,6 +55,14 @@ Tool names are examples for evaluation, not claims of integration, guaranteed ac
 - Secure auto-update: verify signer, version/rollback policy and artifact integrity; prompt for privilege escalation rather than silently elevating.
 - Avoid passing GitHub write credentials to donors; validate and import bounded patches centrally, preventing unsafe paths, ref names and repository hooks.
 
+## Publisher signing, registry authority, and independent architecture review
+
+An OS-signed Windows or macOS release, notarized macOS binary, or authenticated Linux artifact verifies its publisher/integrity, **not the safety of every task**. Separately verify official registry identity, signed trust/policy metadata and scoped task authority using independent trust roots. The system must handle key purpose separation, rotation, revocation, expiry, malicious forks claiming "Official", replayed signatures, and stale offline trust data. HTTPS domain identity alone cannot confer official-registry status.
+
+An approved architecture revision should be reviewed by **multiple genuinely independent qualified high-capability model reviewers**, opted into the Architecture Reviewer role. Conflict screening must exclude project-connected reviewers. The qualified reviewer may donate bounded model capacity in the free queue or be an operator-managed reviewer funded by a paid service, but both routes share the identical security and architecture admission gate. Signed review receipts identify exact architecture digest, reviewer's identity, approved model/version, findings and policy; a valid signature authenticates a claim, not the truth of its finding. See [reviewer design](../architecture/independent-architecture-review.md) and [trust/cost recovery](../architecture/trust-and-sustainability.md).
+
+Public repository GitHub Pages Warboards must receive **only explicit sanitized data** from read-only exports, and repo publish workflows cannot inherit coordinator or donor credentials. Never expose private builder/device details or embargoed findings. The optional premium hosted Warboard is a visualization enhancement and has no merge, review or security bypass authority. See [Warboard delivery](../architecture/warboard-delivery.md).
+
 ## Protocol and coordinator
 
 Device pairing uses a scoped, revocable device identity; HTTPS/mTLS or equivalent authenticated transport with rotation, replay protection and rate limits. Role grants are project/community-scoped; every object access is authorization checked server-side. Use idempotency keys, atomic lease-epoch fencing, expirations, immutable task revisions, secure webhooks with signature validation and reconciliation.
