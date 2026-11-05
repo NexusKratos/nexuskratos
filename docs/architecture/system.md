@@ -1,6 +1,6 @@
 # Proposed system architecture
 
-> **Design proposal, 2026-11-05.** The current project has documentation and a static public website, not a deployed platform or released binary. This complements the existing ARCHITECTURE.md and the unmerged technical implementation-plan PR.
+> **Design proposal, 2026-11-05.** The current project has documentation and a static public website, not a deployed platform or released binary. This complements ARCHITECTURE.md and the merged technical planning documentation; no runtime exists.
 
 ## Design principles
 
@@ -100,6 +100,12 @@ Network partitions, duplicate webhooks, local crashes, machine reboot, stale wor
 - integrations/warboard — optional event/snapshot adapter
 - tests/system — multi-device end-to-end and adversarial scenarios
 
-These paths are **proposed**, not present as implementations today. For detailed implementation task graph and proofs, evaluate [PR #2](https://github.com/NexusKratos/nexuskratos/pull/2) and reconcile its sequencing with the newer marketplace/user-account onboarding goals before merge.
+These paths are **proposed**, not present as implementations today. The [35-task implementation plan](../plans/2026-11-04-platform-implementation.md) is the current design roadmap; it does not constitute a running system.
 
 Related: [marketplace](../vision/marketplace.md), [journey](../vision/contributor-journey.md), [security](../security/threat-model.md), [diagrams](diagrams.md).
+
+## Architecture assurance, deterministic planning and supply chain
+
+Project groups approve their architecture using their own governance process. Independent architecture and plan reviewers supply evidence, and the official registry checks revision-specific eligibility without dictating design. The local runtime can donate AI for planning and reviews; the coordinator must not require AI calls to assign dependency-ready tasks. A signed architectural knowledge pack and model adapter layer are proposed, with provider terms/capability tests before enabling APIs or subscription-native CLIs.
+
+A project with multiple repositories maintains independently verified SBOM snapshots. The security intelligence engine re-evaluates vulnerabilities and propagates scoped signed restrictions to qualified daemons. See [planning](planning-and-orchestration.md), [providers/knowledge](provider-and-knowledge.md), [Task Orc qualification](task-orc-qualification.md) and [continuous supply chain](../security/continuous-supply-chain.md).
