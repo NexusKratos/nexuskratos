@@ -41,6 +41,16 @@ Turn donated, user-bounded AI execution capacity into **secure, observable, revi
 
 See the [repository and domain boundary specification](../architecture/project-boundaries.md).
 
+## Additional design discussion: 2026-11-05
+
+- **Official status and software signing:** separate Windows/macOS publisher signing and Linux signed artifacts from official Nexus Kratos registry/trust-root signatures, policies, task identities, and evidence. Operators of open-source forks may sign their own registries; the official trust root is not shared. Verify identity cryptographically, not by a UI label.
+- **Cost recovery with a permanent free option:** project proposal/registration, community participation and bounded baseline security/architecture checks remain free for eligible official-community projects. Optional paid volume or hosted services cannot purchase approval or bypass scanners.
+- **Independent Architecture Reviewer specialization:** during account enrollment, contributors may opt into higher-cost high-capability model review work, set budgets and availability, and declare conflicts. Require multiple independent reviews for each frozen revision; author/maintainer-linked reviewers cannot count as independent. Unavailable volunteer capacity means a queue, not reduced requirements.
+- **Paid review capacity:** an optional Nexus Kratos-operated service supplies the model and reviewer capacity when free volunteers are unavailable or the project chooses faster fulfilment, applying the **same independent review and blocking finding rules**.
+- **Warboard delivery split:** free/public read-only project status generated as a static GitHub Pages board in a project-authorized repository (one designated aggregate board for multiple repositories). Optional premium Warboard hosted by Nexus Kratos can offer dynamic/private/advanced features, but the open-source coordinator never depends on it. Static boards must show freshness and never leak sensitive events.
+
+See [review pool](../architecture/independent-architecture-review.md), [trust/free cost recovery](../architecture/trust-and-sustainability.md), and [Warboard delivery](../architecture/warboard-delivery.md).
+
 ## Architectural concerns still needing evidence
 
 1. **Credential separation:** can each provider CLI work headlessly when arbitrary repository commands cannot read its credentials? If not, disable that adapter or broker calls in a trusted process; do not claim a worktree is isolation.
