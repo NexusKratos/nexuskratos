@@ -22,10 +22,10 @@ Communication: native worker completion messages; coordinator integrates shared 
 
 Status: done 2026-11-04 for the applied configuration; source records close through the protected PR workflow. Owner: coordinator. Scope: the two new public repositories only. Record security choices, enable native GitHub settings, commit the settings documentation, activate branch/tag rules, and verify API readback. No application code, dependencies, deployment, organization membership, or org-wide account policy changes. Threat scope: protect shared source and workflow permissions; preserve owner access through an audited PR exception.
 
-## Platform implementation planning — authorized 2026-11-04
+## Platform delivery plan — reconciled 2026-11-05
 
-Status: planning document prepared; implementation on explicit user hold. Written/authorized/updated: 2026-11-04 (authorization covers documentation only).
+Status: **documentation complete for integration; implementation not started**. Owner requested reconciliation and merge of the earlier technical-plan PR with merged marketplace and project-repository architecture; this request authorizes documentation integration, not installing, deploying or invoking AI provider tools.
 
-Current plan: [Platform implementation](docs/plans/2026-11-04-platform-implementation.md). It defines the threat sketch, component ownership, protocol and recovery invariants, 19 dependency-ordered tasks, four milestones, reviews, acceptance evidence and unresolved feasibility gates. Proposed decisions are recorded in [ADR 0003](docs/adr/0003-platform-planning-boundaries.md).
+[Reconciled implementation plan](docs/plans/2026-11-04-platform-implementation.md) retains the original 19 tasks and introduces T20–T25 for security scanner gating, external/multiple project-repository authorization, Community Manager/catalog governance, GitHub-free donor UX, redacted notifications and recognition, and signed verified release binaries. All 25 tasks have dependency edges and acceptance tests. Domain roles are proposals only; no live routing changes.
 
-This is the next product plan; earlier completed setup entries above remain historical. No implementation task is running. A future explicit implementation instruction is required to lift the user's planning-only hold.
+The [2026-11-04 ADR](docs/adr/0003-platform-planning-boundaries.md) remains *proposed*, especially database/provider/isolation details. The single-harness versus native-harness choice remains **deferred**. Real implementation requires its own instruction, compatibility/terms checks and failure-mode evidence.

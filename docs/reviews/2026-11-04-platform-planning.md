@@ -39,3 +39,7 @@ Provider credential isolation and enforceable usage ceilings must be proven per 
 Documentation checkpoint allocation: 0.0.4, branch `docs/implementation-plan-20261104`; protected PR workflow required. Commit and push outcomes are verified separately in the final delivery/PR record; this document does not claim a runtime release.
 
 Only small Markdown records and one temporary authoring script were created. No worktree, build output, fixtures, dependency cache or service created; no cleanup/deletion performed. Working filesystem had approximately 14 GiB free (below the configured percentage floor); available RAM approximately 54 GiB. This small documentation task fits without deleting any unrelated material. Repository documents are durable evidence owned by the planning coordinator, retained through subsequent plan revisions. Temporary authoring script is retained for reproduction at this close-out; review at the next planning edit. No reclaimed-space claim.
+
+## Historical review boundary — 2026-11-05
+
+This record remains evidence of the **original 2026-11-04 19-task draft**, not an independent review of the updated implementation plan. Subsequent changes reflecting merged marketplace and framework/project boundaries added six tasks and adjusted dependencies. The later reconciliation, limitations and new checks are recorded separately in [2026-11-05 reconciliation](2026-11-05-pr2-reconciliation.md). Do not reuse the earlier hashes/verdicts as review of the changed plan.

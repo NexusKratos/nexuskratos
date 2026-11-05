@@ -38,6 +38,24 @@ Task execution should be headless by default. Each task declares `headless` or `
 
 A task needing input enters an explicit needs-attention state with a reason and deadline. Cancellation, timeouts, and budget accounting must cover subprocesses. Retries are bounded; partial work is preserved across lease expiry and reassignment. Report current step, usage, logs, last meaningful progress, and deadline to the visibility layer. A heartbeat alone does not establish progress or success.
 
-## Implementation planning proposal
+## Framework versus project code and proposed sites
 
-The [platform implementation plan](docs/plans/2026-11-04-platform-implementation.md) develops these recommendations into task dependencies, protocols, failure handling and acceptance evidence. [ADR 0003](docs/adr/0003-platform-planning-boundaries.md) records proposed modular control/storage and execution boundaries. The plan adds `apps/web` as the TypeScript build boundary within this monorepo. These remain design proposals; no framework, datastore or runtime has been installed.
+This repository is the **framework**: the daemon, control service, shared protocol, libraries, release artifacts, and architecture. Each community project retains its code in **one or multiple independent project repositories** and connects them through explicit scoped GitHub App authorization. A project task must name its repository and base; cross-repo projects create separate PR evidence per target repository. Project source must not be moved into the framework repository as a default.
+
+A **Community Manager** role supports onboarding, proposals, moderation, notifications and recognition, distinct from project maintainers' technical acceptance and platform administrators' infrastructure authority.
+
+The owner is considering `nexuskratos.dev` for framework releases/docs and `nexuskratos.com` for community proposals, discovery and membership. This **does not change the existing `.com` → `.dev` redirect**. The detailed [project boundaries proposal](docs/architecture/project-boundaries.md) captures the security, permission and deployment implications.
+
+## Reconciled technical delivery plan
+
+The [reconciled implementation plan](docs/plans/2026-11-04-platform-implementation.md) retains the original lease/recovery and provider-credential design and extends it to **25 dependency-ordered tasks** with repository registration, marketplace governance, Community Manager permissions, independent security scanning, GitHub-free onboarding, notification/recognition contracts and signed daemon releases. [ADR 0003](docs/adr/0003-platform-planning-boundaries.md) records proposed technology choices. **Documentation only; no runtime is implemented or approved for execution.**
+
+## GitHub-free contributor marketplace (2026-11-05 design update)
+
+The newer product vision introduces a moderated project catalog, idea submissions, contributor accounts, optional notification channels and a local onboarding dashboard. A donor should **not** need a personal GitHub account to participate: the coordinator maps accepted work onto limited GitHub App permissions while presenting project enrollment, limits, task progress and recognized contributions through Nexus Kratos interfaces.
+
+The local daemon enforces donor opt-in per project plus CPU, RAM, disk, concurrency, time, model/provider and trustworthy measurable usage limits. The marketplace can allocate work only inside those constraints; project approval is not permission to execute. Reputation reflects accepted evidence rather than tokens spent.
+
+The full [system design](docs/architecture/system.md), [marketplace specification](docs/vision/marketplace.md), [user journey](docs/vision/contributor-journey.md), [security gates](docs/security/threat-model.md), [diagrams](docs/architecture/diagrams.md), and [design notes](docs/brainstorming/2026-11-05-design-notes.md) document proposed boundaries. The existing [implementation-plan PR #2](https://github.com/NexusKratos/nexuskratos/pull/2) remains a technical planning input to reconcile; it is not silently merged by this update.
+
+The choice between one general-purpose runner harness and multiple provider-native harnesses is **deferred**. Use a typed, versioned adapter boundary in architecture meanwhile; do not hardwire a private runner or promise identical provider behavior. Security and compatibility fixtures, not preference alone, must decide implementation.

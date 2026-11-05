@@ -4,4 +4,5 @@
 - 2026-11-04 | Source: owner clarification | ongoing in its own repository: Warboard development; NexusKratos integration is planned.
 - 2026-11-04 | Source: website setup | done: Cloudflare Workers Static Assets website, primary domain, and additional-domain redirects verified; actual deployment records are in the website repository.
 
-- 2026-11-04 | Source: platform planning | planned: execute T01–T19 only after the planning-only hold is lifted; provider isolation/accounting, runtime data classification, platform qualification and Warboard compatibility gates remain unresolved by design. See docs/plans/2026-11-04-platform-implementation.md.
+- 2026-11-05 | Source: reconciled implementation planning | **planned, not implemented:** 25-task [technical and product plan](docs/plans/2026-11-04-platform-implementation.md); T20 scanner gating, T21 independent project repo registration, T22 moderated catalog/Community Manager, T23 GitHub-free donor enrollment, T24 notifications/reputation, T25 signed binary distribution. Feasibility, threat and rollout checks remain required.
+- 2026-11-05 | Source: owner domain proposal | proposed only: `.dev` framework/docs/downloads and `.com` community; existing redirects and live website unchanged.
