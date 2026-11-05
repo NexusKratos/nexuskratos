@@ -28,6 +28,18 @@ Turn donated, user-bounded AI execution capacity into **secure, observable, revi
 | Warboard | Full visibility and telemetry | Optional independent read-only consumer; no mandatory dependency |
 | Hosting | Self-hostable control plane, multi-project and multi-community | Modular core, versioned protocol; federation deferred |
 | Marketing | README hero and diagrams clarify automated contribution | Static SVG and Mermaid with honest pre-alpha status |
+| Project repository ownership | Framework repo should hold framework only; each community project has one or several repos | Explicit ProjectRepository mappings and scoped GitHub App installations; no code migration by default |
+| Community Manager | Separate community engagement from technical project ownership | Scoped onboarding/moderation/comms/recognition without automatic merge or security permissions |
+| Product domains | Consider .dev for framework and .com for community proposals and discovery | Proposed site roles; no live DNS/redirect changes |
+
+## New owner guidance — 2026-11-05
+
+- **Framework repository:** `NexusKratos/nexuskratos` is for the platform implementation, signed daemon distribution, protocols and documentation. Do not mix arbitrary community project implementation code into it.
+- **Independent project repositories:** one project may target one or multiple repositories (within or outside the NexusKratos organization) through explicit permissions, leases and per-repository PRs.
+- **Community Manager:** a scoped operational role for people, onboarding, suggestions, moderation, messages and recognition, distinct from maintainers and security reviewers.
+- **Domain split (under consideration):** `nexuskratos.dev` would be the framework/developer site; `nexuskratos.com` would be the community portal for ideas, projects and participation. Current redirect remains live until separately approved deployment work.
+
+See the [repository and domain boundary specification](../architecture/project-boundaries.md).
 
 ## Architectural concerns still needing evidence
 
