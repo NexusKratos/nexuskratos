@@ -21,3 +21,11 @@ Communication: native worker completion messages; coordinator integrates shared 
 ## Repository security — authorized 2026-11-04
 
 Status: done 2026-11-04 for the applied configuration; source records close through the protected PR workflow. Owner: coordinator. Scope: the two new public repositories only. Record security choices, enable native GitHub settings, commit the settings documentation, activate branch/tag rules, and verify API readback. No application code, dependencies, deployment, organization membership, or org-wide account policy changes. Threat scope: protect shared source and workflow permissions; preserve owner access through an audited PR exception.
+
+## Platform delivery plan — reconciled 2026-11-05
+
+Status: **documentation complete for integration; implementation not started**. Owner requested reconciliation and merge of the earlier technical-plan PR with merged marketplace and project-repository architecture; this request authorizes documentation integration, not installing, deploying or invoking AI provider tools.
+
+[Reconciled implementation plan](docs/plans/2026-11-04-platform-implementation.md) retains the original 19 tasks and introduces T20–T25 for security scanner gating, external/multiple project-repository authorization, Community Manager/catalog governance, GitHub-free donor UX, redacted notifications and recognition, and signed verified release binaries. All 25 tasks have dependency edges and acceptance tests. Domain roles are proposals only; no live routing changes.
+
+The [2026-11-04 ADR](docs/adr/0003-platform-planning-boundaries.md) remains *proposed*, especially database/provider/isolation details. The single-harness versus native-harness choice remains **deferred**. Real implementation requires its own instruction, compatibility/terms checks and failure-mode evidence.

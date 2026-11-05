@@ -46,6 +46,10 @@ A **Community Manager** role supports onboarding, proposals, moderation, notific
 
 The owner is considering `nexuskratos.dev` for framework releases/docs and `nexuskratos.com` for community proposals, discovery and membership. This **does not change the existing `.com` → `.dev` redirect**. The detailed [project boundaries proposal](docs/architecture/project-boundaries.md) captures the security, permission and deployment implications.
 
+## Reconciled technical delivery plan
+
+The [reconciled implementation plan](docs/plans/2026-11-04-platform-implementation.md) retains the original lease/recovery and provider-credential design and extends it to **25 dependency-ordered tasks** with repository registration, marketplace governance, Community Manager permissions, independent security scanning, GitHub-free onboarding, notification/recognition contracts and signed daemon releases. [ADR 0003](docs/adr/0003-platform-planning-boundaries.md) records proposed technology choices. **Documentation only; no runtime is implemented or approved for execution.**
+
 ## GitHub-free contributor marketplace (2026-11-05 design update)
 
 The newer product vision introduces a moderated project catalog, idea submissions, contributor accounts, optional notification channels and a local onboarding dashboard. A donor should **not** need a personal GitHub account to participate: the coordinator maps accepted work onto limited GitHub App permissions while presenting project enrollment, limits, task progress and recognized contributions through Nexus Kratos interfaces.
