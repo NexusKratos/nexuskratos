@@ -71,7 +71,9 @@ flowchart TB
 
 The GitHub App uses only the permissions each project's owners explicitly grant. The coordinator publishes a candidate PR from a validated bounded artifact; checks and policies must bind to the exact commit and base. Maintainers keep final merge authority until safe automatic-merge policy is proven. A contributor's identity is represented in platform receipts and PR attribution without forcing a personal GitHub login.
 
-Warboard remains independently developed and optional. Publish versioned, redacted events to an observability adapter; the core must function if that consumer is unavailable.
+Warboard remains independently developed and optional. The **free public board** is a sanitized, periodically generated static export published through a project-authorized GitHub Pages workflow; for a multi-repository project a designated repository holds the project-wide board. The **optional premium Warboard** may run as a Nexus Kratos-hosted live/private view under separate access controls. Both consume versioned, redacted status snapshots, never scheduling authority; core operation must continue if either view is unavailable. See [Warboard delivery](warboard-delivery.md).
+
+Architecture Reviewers are opt-in contributor identities donating qualified high-capability model usage, with conflict checks and redundant evidence per approved architecture revision. Projects may also purchase operator-funded review capacity under the **same approval gate**. Registry/publisher trust signing and the official-community **permanent bounded free path** are documented in [trust and sustainability](trust-and-sustainability.md) and [reviewer pool](independent-architecture-review.md).
 
 ## Framework repository versus project repositories
 
