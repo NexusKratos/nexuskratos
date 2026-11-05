@@ -102,6 +102,16 @@ A separate Git worktree is **not** a security sandbox. Repository content and mo
 
 Read the [security strategy and threat model](docs/security/threat-model.md); send actual sensitive findings privately per [SECURITY.md](SECURITY.md).
 
+## Architecture-first planning and deterministic orchestration
+
+The official community would verify **project-owned, revision-specific architecture and implementation plans** before dispatching tasks. Architects retain design authority; independent reviews, plan validation and security checks determine build eligibility. The contributor daemon can opt into Architect, Planner, Architecture Reviewer, Plan Reviewer or Builder roles, with separate model and usage budgets.
+
+A signed local knowledge pack will help compare architectural methods without repeatedly downloading long reference guides. A tiny model may assist retrieval but must not replace higher-capability architecture reasoning. Direct APIs, OpenRouter and subscription-native AI tools each need separate legal and technical qualification: a paid subscription does not automatically grant general third-party API access.
+
+**AI designs and reviews. Deterministic software coordinates.** Task Orc is an unfinished, private evaluation candidate, not a deployed scheduler. The revised [implementation plan](docs/plans/2026-11-04-platform-implementation.md) requires correctness and stress testing plus real-work benchmarks before adoption. The official community also proposes immutable per-repository SBOMs and continuous CVE/malicious-package intelligence with scoped task revocation.
+
+Read the [planning architecture](docs/architecture/planning-and-orchestration.md), [Task Orc qualification plan](docs/architecture/task-orc-qualification.md), [model/provider and knowledge strategy](docs/architecture/provider-and-knowledge.md), and [continuous supply-chain security](docs/security/continuous-supply-chain.md).
+
 ## Proposed delivery path
 
 1. **Feasibility and contracts:** prove provider credential separation, unattended execution, cancellation, budgeting and an isolated executor with safe fixtures.
