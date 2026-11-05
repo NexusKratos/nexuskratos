@@ -37,3 +37,13 @@ Rust is recommended for the contributor agent, CLI adapters, and coordinator; Ty
 Task execution should be headless by default. Each task declares `headless` or `human-assisted` execution, and each adapter must prove unattended operation and detectable completion. Provider login may require interactive onboarding; it must not become an invisible prompt inside an unattended task.
 
 A task needing input enters an explicit needs-attention state with a reason and deadline. Cancellation, timeouts, and budget accounting must cover subprocesses. Retries are bounded; partial work is preserved across lease expiry and reassignment. Report current step, usage, logs, last meaningful progress, and deadline to the visibility layer. A heartbeat alone does not establish progress or success.
+
+## GitHub-free contributor marketplace (2026-11-05 design update)
+
+The newer product vision introduces a moderated project catalog, idea submissions, contributor accounts, optional notification channels and a local onboarding dashboard. A donor should **not** need a personal GitHub account to participate: the coordinator maps accepted work onto limited GitHub App permissions while presenting project enrollment, limits, task progress and recognized contributions through Nexus Kratos interfaces.
+
+The local daemon enforces donor opt-in per project plus CPU, RAM, disk, concurrency, time, model/provider and trustworthy measurable usage limits. The marketplace can allocate work only inside those constraints; project approval is not permission to execute. Reputation reflects accepted evidence rather than tokens spent.
+
+The full [system design](docs/architecture/system.md), [marketplace specification](docs/vision/marketplace.md), [user journey](docs/vision/contributor-journey.md), [security gates](docs/security/threat-model.md), [diagrams](docs/architecture/diagrams.md), and [design notes](docs/brainstorming/2026-11-05-design-notes.md) document proposed boundaries. The existing [implementation-plan PR #2](https://github.com/NexusKratos/nexuskratos/pull/2) remains a technical planning input to reconcile; it is not silently merged by this update.
+
+The choice between one general-purpose runner harness and multiple provider-native harnesses is **deferred**. Use a typed, versioned adapter boundary in architecture meanwhile; do not hardwire a private runner or promise identical provider behavior. Security and compatibility fixtures, not preference alone, must decide implementation.

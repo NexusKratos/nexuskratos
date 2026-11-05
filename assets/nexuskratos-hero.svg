@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" width="1280" height="420" viewBox="0 0 1280 420">
+<title id="title">Nexus Kratos — Open source, amplified by AI</title>
+<desc id="desc">A dark banner with a connected constellation of work nodes and the journey Install, Discover, Allocate, Build, Verify.</desc>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c142d"/><stop offset="0.58" stop-color="#141337"/><stop offset="1" stop-color="#142a3b"/></linearGradient>
+  <linearGradient id="glow" x1="0" x2="1"><stop stop-color="#8f73ff"/><stop offset="1" stop-color="#2fd7dc"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#6d64ff" stop-opacity=".24"/><stop offset="1" stop-color="#6d64ff" stop-opacity="0"/></radialGradient>
+  <filter id="soft"><feGaussianBlur stdDeviation="2"/></filter>
+</defs>
+<rect width="1280" height="420" rx="24" fill="url(#sky)"/>
+<g opacity=".13" stroke="#9bacd1" stroke-width="1"><path d="M0 56H1280M0 112H1280M0 168H1280M0 224H1280M0 280H1280M0 336H1280M0 392H1280"/><path d="M56 0V420M112 0V420M168 0V420M224 0V420M280 0V420M336 0V420M392 0V420M448 0V420M504 0V420M560 0V420M616 0V420M672 0V420M728 0V420M784 0V420M840 0V420M896 0V420M952 0V420M1008 0V420M1064 0V420M1120 0V420M1176 0V420M1232 0V420"/></g>
+<circle cx="1030" cy="206" r="230" fill="url(#halo)"/>
+<g fill="none" stroke="#6369ab" stroke-width="2" opacity=".7">
+ <path d="M797 223L878 125L976 160L1074 88L1186 166L1135 280L1008 336L907 280Z"/>
+ <path d="M878 125L907 280L1074 88L1135 280L976 160L1008 336"/>
+</g>
+<g stroke="url(#glow)" stroke-width="3" fill="#141b3c">
+ <circle cx="797" cy="223" r="12"/><circle cx="878" cy="125" r="13"/><circle cx="976" cy="160" r="17"/><circle cx="1074" cy="88" r="13"/><circle cx="1186" cy="166" r="12"/><circle cx="1135" cy="280" r="15"/><circle cx="1008" cy="336" r="13"/><circle cx="907" cy="280" r="12"/>
+</g>
+<g fill="#bcbbff" opacity=".83"><circle cx="976" cy="160" r="6"/><circle cx="1135" cy="280" r="5"/><circle cx="878" cy="125" r="5"/></g>
+<g font-family="Arial, Helvetica, sans-serif">
+ <text x="70" y="96" font-size="18" font-weight="700" letter-spacing="5" fill="#82e3ef">N E X U S   K R A T O S</text>
+ <text x="70" y="173" font-size="52" font-weight="700" fill="#f6f8ff">Build together.</text>
+ <text x="70" y="238" font-size="52" font-weight="700" fill="url(#glow)">Amplified by AI.</text>
+ <text x="71" y="284" font-size="19" fill="#c4cde5">A secure, automated contribution network for open source.</text>
+ <rect x="69" y="314" width="616" height="55" rx="14" fill="#1d2948" stroke="#4b547c" stroke-width="1.5"/>
+ <text x="91" y="348" font-size="16" font-weight="600" fill="#e2e7fc">Install</text>
+ <text x="166" y="348" font-size="18" fill="#77b9e3">›</text>
+ <text x="189" y="348" font-size="16" font-weight="600" fill="#e2e7fc">Discover</text>
+ <text x="284" y="348" font-size="18" fill="#77b9e3">›</text>
+ <text x="309" y="348" font-size="16" font-weight="600" fill="#e2e7fc">Allocate</text>
+ <text x="401" y="348" font-size="18" fill="#77b9e3">›</text>
+ <text x="427" y="348" font-size="16" font-weight="600" fill="#e2e7fc">Build</text>
+ <text x="486" y="348" font-size="18" fill="#77b9e3">›</text>
+ <text x="511" y="348" font-size="16" font-weight="600" fill="#e2e7fc">Verify</text>
+</g>
+</svg>
