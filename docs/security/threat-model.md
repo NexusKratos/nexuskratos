@@ -82,3 +82,7 @@ Collect the minimum identity/device metadata needed to coordinate and audit; red
 Attempt host-secret escape, malicious shell hooks, symlink traversal, exfiltration over allowed network, namespace/container breakout, spoofed review, stale lease replay, duplicate webhook, unbounded subprocess, resource exhaustion, provider-login expiry, update tampering, crafted scan outputs, restored-database replay and compromised GitHub installation tokens. Document threat, fixture, expected block, measured outcome, residual risk and responsible owner.
 
 Read the existing [public security policy](../../SECURITY.md) for private disclosure channels. This document describes desired defense in depth; it does not replace incident response or the repository's existing branch/security controls.
+
+## Continuous vulnerability assessment
+
+One-time onboarding scans are not permanent approval. Require complete-enough commit/build-bound SBOM snapshots (including transitive dependencies), daily plus urgent advisory refreshes, and impact-scoped signed block decisions when a vulnerable or malicious component is detected. The coordinator blocks affected new claims; the local supervisor enforces its own sandbox and security policy. Offline execution cannot be stopped instantaneously and must be bounded by leases and policy freshness. See [continuous supply-chain intelligence](continuous-supply-chain.md).
