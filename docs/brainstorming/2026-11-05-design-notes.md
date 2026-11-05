@@ -20,7 +20,7 @@ Turn donated, user-bounded AI execution capacity into **secure, observable, revi
 | Architectural roles | Architects, orchestrators, builders, QA, security reviewers | Role-scoped permissions and independent review; accepted result is provenance-bound |
 | Models | Minimum capability tier, approved lists and long/short complexity | Match capability, model, provider and effort with task; no silent fallback |
 | Execution | Headless and unattended where feasible | Typed generic runner contract; explicit needs-attention path |
-| Harness choice | One universal harness versus provider-native harnesses | **Deferred until after current documentation tasks**; qualify alternatives against security, UX and provider capability |
+| Harness choice | One universal harness versus provider-native harnesses | **Proposed direction:** standardized Nexus Kratos adapter interface with multiple qualified harnesses; adoption remains pending provider/security tests |
 | Security | Scanners must protect donors, projects and code | Multi-phase scanning, sandbox, no host secrets, narrow GitHub App, PR policy |
 | Review | Two-model review preference (high-tier judgment + low-tier mechanical) | Independent identities and candidate-bound test/scanner receipts; model diversity is a quality goal, not a substitute for human authority |
 | Communication | Email, Telegram and web status | Consent-based notifications and redacted history; local UI is primary |
@@ -61,6 +61,17 @@ See [review pool](../architecture/independent-architecture-review.md), [trust/fr
 - **Supply-chain protection:** per-repo commit/build-bound SBOM snapshots with resolved transitive dependencies; normalized daily-plus-urgent CVE/advisory intelligence, targeted signed blocks and local daemon enforcement. Approval expires when relevant architecture or dependency evidence becomes invalid; only affected tasks need reassessment.
 
 Full design records: [planning](../architecture/planning-and-orchestration.md), [provider knowledge](../architecture/provider-and-knowledge.md), [Task Orc qualification](../architecture/task-orc-qualification.md), [continuous supply chain](../security/continuous-supply-chain.md).
+
+## Continued owner discussion: Hex-controlled CLIs and GUI (2026-11-05)
+
+- **Owner constraint:** Existing provider-native CLIs may be supported only when launched under the controlled **Hex** execution boundary rather than as unrestricted host processes. Hex is an owner-proposed component; the precise runtime/interface and ability to enforce host isolation still require demonstration.
+- **Recommended interface:** one typed, versioned task and evidence contract with pluggable OpenCode, Claude Code, Codex and other qualified CLI adapters. Distinguish harness capability from containment; the trusted daemon enforces project opt-in, leases, local quotas, cancellation and permission policy.
+- **New GUI question:** support GUI through separately qualified modes: (1) sandboxed headless browser first, (2) ephemeral virtual desktop for GUI-only tasks, and (3) short-lived, donor-approved human-assisted sessions. None may access or control the donor's actual desktop by default.
+- **Non-negotiable controls:** no host session/home, secrets, SSH or arbitrary sockets; isolated display and network; local signed task admission, process-tree termination, resource/bandwidth/privacy budgets, viewer authentication, artifact review and consent-based screenshots.
+- **Security blocker:** some provider-native CLIs need credentials inside the agent process. Do not claim safe containment until an officially permitted broker/delegated-auth method is verified per provider. A virtual display alone does not constitute isolation.
+- **Unresolved:** precise meaning of “Desk 4” in the discussion; Hex implementation/OS support; whether browser automation suffices for MVP; whether high-risk projects require microVM isolation.
+
+See [Hex sandbox, harness and GUI proposal](../architecture/hex-sandbox-and-gui.md). These are design additions, **not deployed GUI support or a final harness selection**.
 
 ## Architectural concerns still needing evidence
 

@@ -67,6 +67,14 @@ The **control plane** manages project discovery, account and device enrollment, 
 
 The **contributor daemon** is planned as a signed Rust binary with a local web UI, device journal, trusted supervisor, model/runner adapters and a separately isolated repository executor. Tasks are headless by default; needs-attention cases are explicit and bounded. Provider credentials remain local, separated from repository execution.
 
+### CLI and GUI support: contained by design
+
+**Proposed, not implemented:** Nexus Kratos would expose one controlled task interface to multiple qualified coding harnesses (such as OpenCode, Claude Code and Codex). The contributor's trusted daemon would supervise a **Hex-controlled sandbox** rather than allowing provider CLIs or repository commands to run unrestricted on the host. Hex isolation has not yet been validated.
+
+GUI tasks could also be supported as **sandboxed headless browser automation**, and later as an **isolated ephemeral virtual desktop** with donor consent and authenticated viewing. Neither mode may access the donor's personal desktop, host credentials or unrestricted network. Every harness and operating system must pass credential-separation, cancellation, isolation, resource and security qualification before being offered in the project catalog.
+
+[Read the proposed multi-harness and GUI execution design](docs/architecture/hex-sandbox-and-gui.md).
+
 The **GitHub integration** publishes attempt-specific branches and PRs using limited GitHub App permissions, but it does not permit donors or their models to merge unreviewed code. Candidate review and QA evidence must bind to the exact commit and repository base.
 
 **Warboard** remains independently developed and optional. The proposed **free project Warboard** is an automatically refreshed, sanitized GitHub Pages dashboard published with a project's chosen repository; a **premium managed Warboard** may offer live/private/history features on a hosted Nexus Kratos service. Both are views of coordinator data, never scheduling authorities. See [Warboard delivery](docs/architecture/warboard-delivery.md).

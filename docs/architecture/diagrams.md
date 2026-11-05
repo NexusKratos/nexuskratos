@@ -99,3 +99,25 @@ flowchart TB
 ~~~
 
 The proposed domain destinations are **not live**: `nexuskratos.com` still redirects to `.dev`. See [repository and domain boundaries](project-boundaries.md).
+
+## Proposed CLI, browser and graphical sandbox modes
+
+~~~mermaid
+flowchart TB
+  User["Donor: trusted local UI + consent"] --> Daemon["Trusted daemon: local quotas, leases, kill switch"]
+  Control["Coordinator: admitted tasks and policy"] --> Daemon
+  Daemon --> Match{"Capability approved by donor + platform?"}
+  Match --> CLI["Versioned CLI harness adapter"]
+  Match --> Web["Headless browser adapter"]
+  Match --> GUI["Ephemeral virtual GUI adapter"]
+  CLI --> Hex["Hex-controlled isolated executor"]
+  Web --> Hex
+  GUI --> Hex
+  Hex --> Repo["Untrusted project + tasks"]
+  Hex --> Evidence["Bounded artifacts, scans and progress"]
+  Evidence --> Daemon
+  Daemon --> Review["Independent QA / scanner / PR gates"]
+  Match -->|Unsupported| Block["Reject task before lease"]
+~~~
+
+This depicts the proposed *control boundary*, not verified capabilities of Hex. The desktop viewer, if provided, must never expose the donor's host desktop or provider credentials. See [Hex multi-harness/GUI proposal](hex-sandbox-and-gui.md).
