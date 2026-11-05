@@ -80,3 +80,22 @@ flowchart TB
 ## Reading order
 
 For behavioral details: [contributor journey](../vision/contributor-journey.md). For service contracts: [system architecture](system.md). For threats/scanners: [security model](../security/threat-model.md). For unresolved alternatives: [brainstorming](../brainstorming/2026-11-05-design-notes.md).
+
+## Framework releases versus project repositories
+
+~~~mermaid
+flowchart TB
+  Framework["NexusKratos framework repository"] --> Release["Signed daemon / installer releases"]
+  Framework --> Control["Coordinator and protocol"]
+  Dev["Proposed nexuskratos.dev: developer docs, releases"] --> Release
+  Com["Proposed nexuskratos.com: community portal"] --> Control
+  Donor["Donor with installed daemon"] --> Com
+  Donor --> Release
+  Control --> App["Per-project scoped GitHub App"]
+  App --> RepoA["Project A: repo A"]
+  App --> RepoB1["Project B: repo B1"]
+  App --> RepoB2["Project B: repo B2"]
+  Manager["Community Manager: proposals, onboarding, moderation"] --> Com
+~~~
+
+The proposed domain destinations are **not live**: `nexuskratos.com` still redirects to `.dev`. See [repository and domain boundaries](project-boundaries.md).

@@ -41,6 +41,14 @@ No personal GitHub account is planned for ordinary donors. GitHub stays behind t
 
 A guarantee that a provider cannot technically enforce—for example a hard dollar limit for an unmetered subscription—must never be advertised as a guarantee.
 
+## One framework, many independent projects
+
+**This repository builds the Nexus Kratos framework; it is not the workspace for every open-source project.** The framework will publish signed contributor-daemon binaries, installer artifacts, protocols and service code. Each community project owns **one or multiple GitHub repositories**, with its code, issues, branches, reviews and releases remaining in those repositories. The coordinator maps approved project tasks to explicitly authorized repositories; contributors use the marketplace, not GitHub.
+
+**Proposed public site split:** `nexuskratos.dev` would document the framework and offer its signed releases and installation guides; `nexuskratos.com` would host the community experience for suggesting and discovering projects, joining projects and tracking contributions. **Today, `.com` redirects to `.dev`, and neither the marketplace nor daemon exists.** No domain or deployment change is made by this proposal.
+
+Read the [repository and domain boundaries](docs/architecture/project-boundaries.md).
+
 ## How the architecture is intended to work
 
 ~~~mermaid
@@ -76,7 +84,9 @@ Projects can be **suggested → reviewed → approved → active → paused/arch
 | Coordinator | Match eligible tasks to donated capacity; enforce leases and routing |
 | Builder / contributor | Donate bounded AI execution, tests, review or documentation |
 | Independent QA / security reviewer | Validate exact candidate, test output and security evidence |
-| Maintainer / moderator | Approve projects, govern policy, review and accept changes |
+| Project maintainer | Own project repositories, approve technical direction, review and accept project code |
+| Community Manager / moderator | Onboard members, curate proposals, organize community activity, communicate and recognize contributions; no automatic code-merge or security-bypass permission |
+| Platform administrator | Operate core infrastructure, identity and global policy under audited privileges |
 
 Badges and reputation should recognize **verified, accepted work and helpful reviews**, never tokens spent or unsupervised compute consumption. The system must resist fraudulent contributions and badge farming.
 
@@ -104,6 +114,7 @@ The [existing implementation-plan PR #2](https://github.com/NexusKratos/nexuskra
 - [Project marketplace and governance](docs/vision/marketplace.md)
 - [Contributor UX, state machines and notifications](docs/vision/contributor-journey.md)
 - [System architecture and contracts](docs/architecture/system.md)
+- [Framework, project repositories, domain proposal and community management](docs/architecture/project-boundaries.md)
 - [Mermaid architecture, security and workflow diagrams](docs/architecture/diagrams.md)
 - [Threat model, scanner stages and security requirements](docs/security/threat-model.md)
 - [Brainstorming: questions, decisions and concerns](docs/brainstorming/2026-11-05-design-notes.md)
