@@ -38,6 +38,14 @@ Task execution should be headless by default. Each task declares `headless` or `
 
 A task needing input enters an explicit needs-attention state with a reason and deadline. Cancellation, timeouts, and budget accounting must cover subprocesses. Retries are bounded; partial work is preserved across lease expiry and reassignment. Report current step, usage, logs, last meaningful progress, and deadline to the visibility layer. A heartbeat alone does not establish progress or success.
 
+## Framework versus project code and proposed sites
+
+This repository is the **framework**: the daemon, control service, shared protocol, libraries, release artifacts, and architecture. Each community project retains its code in **one or multiple independent project repositories** and connects them through explicit scoped GitHub App authorization. A project task must name its repository and base; cross-repo projects create separate PR evidence per target repository. Project source must not be moved into the framework repository as a default.
+
+A **Community Manager** role supports onboarding, proposals, moderation, notifications and recognition, distinct from project maintainers' technical acceptance and platform administrators' infrastructure authority.
+
+The owner is considering `nexuskratos.dev` for framework releases/docs and `nexuskratos.com` for community proposals, discovery and membership. This **does not change the existing `.com` → `.dev` redirect**. The detailed [project boundaries proposal](docs/architecture/project-boundaries.md) captures the security, permission and deployment implications.
+
 ## GitHub-free contributor marketplace (2026-11-05 design update)
 
 The newer product vision introduces a moderated project catalog, idea submissions, contributor accounts, optional notification channels and a local onboarding dashboard. A donor should **not** need a personal GitHub account to participate: the coordinator maps accepted work onto limited GitHub App permissions while presenting project enrollment, limits, task progress and recognized contributions through Nexus Kratos interfaces.
