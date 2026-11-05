@@ -47,6 +47,16 @@ The daemon must show **Official Nexus Kratos — cryptographically verified**, *
 
 A free project's processing can wait in a queue if it exceeds sponsored capacity, but **must not be dispatched to builders without completing mandatory checks**. Explicitly disclose quotas, wait policy, data retention, provider model costs and whether project owners must bring their own API keys; never silently charge contributors or promise free unlimited LLM tokens. Consider sponsorships, grants, donation pools, bring-your-own model/API quotas and opt-in community-funded scanning.
 
+## Independent review capacity and equitable access
+
+A project may request **multiple independent high-capability AI architecture reviews** through two parallel fulfilment paths: qualified volunteers who explicitly opt into an Architecture Reviewer role and donate bounded model usage, or a paid, operator-funded review service. Both routes use **the same published independence, model-tier, risk, evidence and finding-resolution requirements**; payment buys capacity, not approval. A shortage of free reviewers results in a queue, not a weakened gate.
+
+An Architecture Reviewer must have no disqualifying authorship, affiliation or project-control connection. Reviews bind the exact architecture revision, reviewer identity, model/provider/version, findings and usage receipt; project architects resolve design questions according to their own governance. See the [independent architecture-review pool](independent-architecture-review.md).
+
+## Public visibility and optional managed Warboard
+
+The intended **free Warboard** is a generated public GitHub Pages dashboard hosted by the project's own chosen repository (or dedicated documentation repository). It uses a strictly sanitized static snapshot, not raw private logs. The optional **premium hosted Warboard** can provide faster updates, private views, analytics and retention, with separately metered operational cost. Both consume the same read-only coordinator events. The free path remains available without the premium service. See [Warboard delivery](warboard-delivery.md).
+
 ## Architecture and data contracts to design
 
 `RegistryIdentity`, `TrustRoot`, `KeyDelegation`, `SignedPolicyRevision`, `FrameworkReleaseAttestation`, `ProjectApprovalAttestation`, `TaskManifestSignature`, `SecurityIntelligenceSnapshot`, `BillingAccount`, `ServiceUsageReceipt`, `FreeQuotaGrant`, `SponsorshipGrant`, and `ServiceEntitlement` need separate immutable identifiers, tenant scope, valid-from/expiry and audit trails. Payment records are distinct from security certification and must never grant authorization to skip checks.
