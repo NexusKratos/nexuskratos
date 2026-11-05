@@ -26,10 +26,16 @@ GitHub remains the **maintainer-facing source of truth for code and PRs**, not a
 - **Lifecycle:** suggested → under review → approved → active → paused → archived; reasoned transitions, audit history and appeal path.
 - **Discovery:** searchable categories, project pages, visible issue/task pool, dependency health, skill/capability needs and public review history.
 - **Enrollment:** donor opt-in per project, per-device/contributor quotas, fair scheduling across projects, clear off-switch and device health.
-- **Roles:** project proposer, planner/architect, coordinator, contributor-builder, reviewer/QA/security reviewer, project maintainer, community moderator and platform operator. These are scoped permissions, not informal titles.
+- **Roles:** project proposer, planner/architect, coordinator, contributor-builder, reviewer/QA/security reviewer, project maintainer, **Community Manager** (onboarding, project discovery, announcements, recognition and moderation) and platform operator. These are scoped permissions, not informal titles. Community Managers have no automatic source-merge or security-override permissions.
 - **Contribution receipts:** immutable task and attempt IDs, model/tool capability constraints, commit hashes, test receipts, scan outcomes, reviewers and acceptance status. Aggregate views must preserve the underlying evidence.
 - **Visibility:** donated time and measured/estimated/unknown provider usage, resource utilization, active processes, work queue, blocked reasons, notification delivery and history.
 - **Recognition:** badges, reputation, leaderboards where opted in, milestones and project acknowledgements. Prevent pay-to-win incentives, badge farming and exposure of private device data.
+
+## Ownership of framework and projects
+
+The `NexusKratos/nexuskratos` repository produces the **framework**—control plane, signed daemon releases, shared protocol and tooling. Each listed community project links to **one or multiple independently maintained GitHub repositories**, including repos in external organizations that explicitly grant the required GitHub App access. A project listing does not move project code into the framework repository, and approved project status does not grant blanket write permissions. Donors need not use GitHub directly.
+
+For future public interfaces, propose `nexuskratos.dev` as the framework/developer site and `nexuskratos.com` as the community/project proposal and discovery site. The live `.com` redirect is unchanged and no community site exists yet. See [framework and project boundaries](../architecture/project-boundaries.md).
 
 ## Trust and transparency boundaries
 
