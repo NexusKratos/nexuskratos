@@ -51,6 +51,17 @@ See the [repository and domain boundary specification](../architecture/project-b
 
 See [review pool](../architecture/independent-architecture-review.md), [trust/free cost recovery](../architecture/trust-and-sustainability.md), and [Warboard delivery](../architecture/warboard-delivery.md).
 
+## Later discussion: architecture planning and deterministic Task Orc evaluation
+
+- **Community architecture freedom:** project groups own architecture and may collaborate under their own declared decision rules. Official Nexus Kratos verifies revision-specific independent review, resolved blocking findings and task safety; it does not dictate the technology stack. One project may register multiple repositories; tasks can originate from multiple projects but permissions remain repository-scoped.
+- **Planning as volunteer work:** Architect, Planner and Plan Reviewer are separately opted-in AI roles in the contributor daemon, with explicit provider/model/usage budgets. Projects may submit existing plans or use donated/paid planning capacity; AI never authorizes its own plan. Architecture and plan reviews precede implementation eligibility.
+- **Knowledge efficiency:** distribute a compact signed local knowledge pack of architectural methods with explicit trade-offs and retrieval. Consider an optional tiny model for classification, not final design. Keep project-specific approved design and high-capability planning separate.
+- **Provider ecosystem:** use a typed multi-provider interface for direct APIs, OpenRouter, verified subscription-native CLI modes, Gemini, Grok and other qualified models. Astra/Fable are preferred candidates for difficult planning subject to benchmark and availability; no provider's monthly subscription may be assumed to grant reusable API credits without current legal/technical verification.
+- **Task Orc:** its Rust deterministic validation/readiness, coherent-task decomposition, model capability/risk floors, session affinity and bounded Warboard outbox are relevant, but it currently lacks distributed leases/authoritative execution. Owner welcomes possible future publication, yet it is still a private, unfinished, proprietary evaluation candidate. **Do not copy or publish its source** without a separate license/release decision. Qualify via reproducible stress/fault tests and comparative real engineering trials before adoption.
+- **Supply-chain protection:** per-repo commit/build-bound SBOM snapshots with resolved transitive dependencies; normalized daily-plus-urgent CVE/advisory intelligence, targeted signed blocks and local daemon enforcement. Approval expires when relevant architecture or dependency evidence becomes invalid; only affected tasks need reassessment.
+
+Full design records: [planning](../architecture/planning-and-orchestration.md), [provider knowledge](../architecture/provider-and-knowledge.md), [Task Orc qualification](../architecture/task-orc-qualification.md), [continuous supply chain](../security/continuous-supply-chain.md).
+
 ## Architectural concerns still needing evidence
 
 1. **Credential separation:** can each provider CLI work headlessly when arbitrary repository commands cannot read its credentials? If not, disable that adapter or broker calls in a trusted process; do not claim a worktree is isolation.
