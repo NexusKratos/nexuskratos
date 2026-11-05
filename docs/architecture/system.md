@@ -52,7 +52,7 @@ flowchart TB
 
 ### Control plane
 
-- **Identity and project catalog:** accounts, contributors/devices, per-project trust/membership, proposals, review, approved catalog and recognition.
+- **Identity and project catalog:** accounts, contributors/devices, per-project trust/membership, proposals, review, approved catalog, recognition and role-scoped Community Manager privileges.
 - **Planning:** architecture proposals and immutable plan/task revisions, dependencies, acceptance criteria, required capability/model tier and explicit approval to publish a task plan.
 - **Scheduling:** fair opportunity across approved projects; match policy/capability and resource budgets; atomic claim, short lease, extension, cancellation, progress/stall tracking, recovery and stale-epoch fencing.
 - **Review and GitHub integration:** validated artifact ingestion, attempt-scoped branch and PR publication, independent security/QA/code review, merge-policy evaluation, webhook reconciliation and immutable acceptance evidence.
@@ -72,6 +72,12 @@ flowchart TB
 The GitHub App uses only the permissions each project's owners explicitly grant. The coordinator publishes a candidate PR from a validated bounded artifact; checks and policies must bind to the exact commit and base. Maintainers keep final merge authority until safe automatic-merge policy is proven. A contributor's identity is represented in platform receipts and PR attribution without forcing a personal GitHub login.
 
 Warboard remains independently developed and optional. Publish versioned, redacted events to an observability adapter; the core must function if that consumer is unavailable.
+
+## Framework repository versus project repositories
+
+`NexusKratos/nexuskratos` is the platform/framework source (including daemon binaries, protocol and coordinator), **not** a monorepo into which all contributed projects are copied. Each community project points to **one or multiple separate, explicitly authorized GitHub repositories**. The GitHub App has per-installation, per-repository scopes and must not assume ownership or access to a repo merely because it appears in the catalog. Task revisions pin the target repository and base commit; multi-repo plans coordinate separate PRs, evidence and acceptance.
+
+The community interface and project discovery may eventually live at `nexuskratos.com`, with framework releases and documentation at `nexuskratos.dev`; this is a proposal, not current routing. A scoped Community Manager role manages proposals, contributor onboarding and community engagement without technical review/merge or security-bypass privilege. See [repository/domain boundaries](project-boundaries.md).
 
 ## Core contracts and failure guarantees
 
