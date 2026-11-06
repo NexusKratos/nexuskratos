@@ -9,3 +9,5 @@ The NexusKratos platform runtime is not implemented. Warboard remains under acti
 2026-11-05: PRs #3 and #4 merged the README hero/architecture/security/marketplace vision and the framework versus independent project-repository boundary, scoped Community Manager and proposed domain split. There are still no runnable binaries, marketplace, working coordinator, scanner pipeline, user accounts or cross-domain deployment changes.
 
 2026-11-05: PR #2 technical-plan reconciliation drafted for protected PR merge; the original 19-task design is retained and expanded to 25 planned tasks. Documentation validation is separate from runtime/independent QA and no implementation is authorized or claimed.
+
+2026-11-06: dependency license policy accepted (ADR 0004: MIT, Apache-2.0, BSD-style permissive) and an open-source building-blocks survey recorded. Codex automation is API-key only by OpenAI's documentation; Claude subscription use for community work is unresolved. No dependency added; no code exists.
