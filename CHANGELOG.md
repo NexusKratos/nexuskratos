@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.0.6 — 2026-11-07
+
+- Extend the dependency license policy (ADR 0004) by owner decision: allow `Unicode-3.0`, `Zlib` and `CDLA-Permissive-2.0`; allow `MPL-2.0` only for dependencies used unmodified, with source locations listed in shipped license inventories.
+
+## 0.0.5 — 2026-11-06
+
+- Accept a dependency license policy (ADR 0004): MIT, Apache-2.0 and BSD-style permissive licenses (BSD-2/3-Clause, 0BSD, ISC, PostgreSQL); copyleft, source-available and proprietary code excluded; separately executed GPL/LGPL tools, other permissive licenses and model-weight licenses pending owner decision.
+- Record a survey of open-source building blocks for agent memory, sandboxing, headless CLI execution and orchestration, including publisher terms that make API keys the first-class provider path.
+- Point T01's future decision record at the next free ADR number, since 0004 is now taken.
+
 ## 0.0.4 — 2026-11-05
 
 - Reconcile the technical implementation plan against the merged marketplace, framework/project-repository and Community Manager design.
