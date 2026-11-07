@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.6 — 2026-11-07
+
+- Extend the dependency license policy (ADR 0004) by owner decision: allow `Unicode-3.0`, `Zlib` and `CDLA-Permissive-2.0`; allow `MPL-2.0` only for dependencies used unmodified, with source locations listed in shipped license inventories.
+
 ## 0.0.5 — 2026-11-06
 
 - Accept a dependency license policy (ADR 0004): MIT, Apache-2.0 and BSD-style permissive licenses (BSD-2/3-Clause, 0BSD, ISC, PostgreSQL); copyleft, source-available and proprietary code excluded; separately executed GPL/LGPL tools, other permissive licenses and model-weight licenses pending owner decision.

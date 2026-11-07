@@ -11,3 +11,4 @@ The NexusKratos platform runtime is not implemented. Warboard remains under acti
 2026-11-05: PR #2 technical-plan reconciliation drafted for protected PR merge; the original 19-task design is retained and expanded to 25 planned tasks. Documentation validation is separate from runtime/independent QA and no implementation is authorized or claimed.
 
 2026-11-06: dependency license policy accepted (ADR 0004: MIT, Apache-2.0, BSD-style permissive) and an open-source building-blocks survey recorded. Codex automation is API-key only by OpenAI's documentation; Claude subscription use for community work is unresolved. No dependency added; no code exists.
+2026-11-07: owner extended the license policy: `Unicode-3.0`, `Zlib` and `CDLA-Permissive-2.0` allowed; `MPL-2.0` allowed for unmodified dependencies only.
