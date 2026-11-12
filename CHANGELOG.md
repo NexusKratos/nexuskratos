@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.7 — 2026-11-12
+
+- Add a session handoff covering the license policy, building-blocks research, the Opengrep assessment and open owner decisions; repoint `HANDOFF.md`.
+
 ## 0.0.6 — 2026-11-07
 
 - Extend the dependency license policy (ADR 0004) by owner decision: allow `Unicode-3.0`, `Zlib` and `CDLA-Permissive-2.0`; allow `MPL-2.0` only for dependencies used unmodified, with source locations listed in shipped license inventories.
